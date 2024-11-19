@@ -29,6 +29,13 @@ output logic [n-1:0]z
 
     );
     
-assign z=s? x:y;
+always @ (*)
+begin 
+ if (s==0)
+         z=x;
+ else 
+         z=y;
     
+   end  
+   
 endmodule
